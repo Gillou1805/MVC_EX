@@ -35,7 +35,7 @@ public class Main extends Application implements PropertyChangeListener, IView {
     public Controller getController(){
         return this.control;
     }
-
+// J'ai laissé mes tests dans le switch case
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
         switch (evt.getPropertyName()) {

@@ -27,7 +27,6 @@ public class StatusDAO implements IStatusDAO {
             try {
                 statement.executeUpdate("CREATE TABLE IF NOT EXISTS Status (id SERIAL PRIMARY KEY, nom VARCHAR(30))");
             } catch (SQLException e) {
-                // La table existe déjà. Log pour le cas où.
                 System.out.println(e.getMessage());
             }
             statement.close();
@@ -113,7 +112,7 @@ public class StatusDAO implements IStatusDAO {
         return true;
     }
 
-    
+    //Test pour débug laissé
     @Override
     public boolean addStatus(String nom) {
         try {

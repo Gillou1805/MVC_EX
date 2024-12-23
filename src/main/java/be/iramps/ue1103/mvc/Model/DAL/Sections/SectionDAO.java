@@ -26,7 +26,6 @@ public class SectionDAO implements ISectionDAO {
             try {
                 statement.executeUpdate("CREATE TABLE IF NOT EXISTS Section (id SERIAL PRIMARY KEY, nom VARCHAR(30))");
             } catch (SQLException e) {
-                // La table existe déjà. Log pour le cas où.
                 System.out.println(e.getMessage());
             }
             statement.close();
